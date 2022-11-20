@@ -1,0 +1,36 @@
+@import '../../sass/_variables.scss';
+
+.loader {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient($bcg-color-darker, $bcg-color-lighter);
+}
+
+.loader__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 195px;
+    height: 85px;
+}
+
+.loader__logo {
+    position: relative;
+    color: $white;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 65px;
+    font-weight: 700;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 2px;
+        height: 100%;
+        background-color: $bright-blue;
+    }
+}
