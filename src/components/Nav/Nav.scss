@@ -22,11 +22,11 @@
 }
 
 .hamburger__bars {
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 .hamburger__xmark {
-    font-size: 34px;
+    font-size: 3.4rem;
 }
 
 .nav__list {
@@ -39,7 +39,7 @@
     width: 100%;
     height: calc(100vh - 60px);
     padding: 50px 10px;
-    background-color: $bright-blue;
+    background-color: $nav-blue;
     text-transform: uppercase;
     list-style: none;
 
@@ -66,12 +66,27 @@
 }
 
 .nav__link {
+    width: 100%;
+    height: 100%;
     color: $white;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 700;
     text-decoration: none;
 
     @include mq(sm) {
         font-size: 16px;
+    }
+}
+
+.nav__element:nth-last-child(1) .nav__link {
+
+    @include mq(sm) {
+        padding: 6px 12px;
+        border: 1px solid $bright-blue;
+        border-radius: 6px;
+
+        &:hover {
+            background-color: $bright-blue;
+        }
     }
 }

@@ -15,7 +15,7 @@
 
 
     &--active-nav {
-        background-color: $bright-blue;
+        background-color: $nav-blue;
 
         @include mq(sm) {
             background-color: transparent;
@@ -31,15 +31,15 @@
 .logo__sign {
     color: $white;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 700;
     text-decoration: none;
 
     @include mq(sm) {
-        font-size: 38px;
+        font-size: 3.8rem;
     }
 
     @include mq(md) {
-        font-size: 40px;
+        font-size: 4rem;
     }
 }
