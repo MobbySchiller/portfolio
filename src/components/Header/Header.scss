@@ -1,0 +1,45 @@
+@import '../../sass/_variables.scss';
+@import '../../sass/_mixins.scss';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    z-index: 2;
+
+
+    &--active-nav {
+        background-color: $bright-blue;
+
+        @include mq(sm) {
+            background-color: transparent;
+        }
+    }
+
+    @include mq(md) {
+        height: 75px;
+        padding: 24px;
+    }
+}
+
+.logo__sign {
+    color: $white;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+
+    @include mq(sm) {
+        font-size: 38px;
+    }
+
+    @include mq(md) {
+        font-size: 40px;
+    }
+}

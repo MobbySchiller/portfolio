@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Loader from '../Loader/Loader'
+import Page from '../Page/Page'
+import './App.scss'
 
 const App: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false)
@@ -10,7 +12,7 @@ const App: React.FC = () => {
 
   return (
     <div className="wrapper">
-      {isLoaded ? 'page' : <Loader />}
+      {isLoaded ? <Page /> : <Loader />}
     </div>
   )
 }

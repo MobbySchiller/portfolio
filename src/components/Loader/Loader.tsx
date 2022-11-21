@@ -21,7 +21,7 @@ const Loader: React.FC = () => {
         setLetterId(letterId + 1)
     }
 
-    useEffect(() => {
+    useEffect((): void => {
         setTimeout(typeLogo, 200)
     }, [loaderText])
 

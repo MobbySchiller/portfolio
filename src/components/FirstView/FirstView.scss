@@ -1,0 +1,16 @@
+@import '../../sass/_variables.scss';
+@import '../../sass/_mixins.scss';
+
+.first-view {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient($bcg-color-darker, $bcg-color-lighter);
+}
+
+.intro {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
