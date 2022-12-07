@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useEffect } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import Nav from '../Nav/Nav'
 import './Header.scss'
 
@@ -9,19 +9,25 @@ enum Breakpoint {
 export interface State {
     navIsActive: boolean
     setNavIsActive: React.Dispatch<React.SetStateAction<boolean>>
+    isDesktop: boolean
 }
 
 const Header: React.FC = () => {
+    const [isDesktop, setIsDesktop] = useState<boolean>(true)
     const [isHeaderVisible, setIsHeaderVisible] = useState<boolean>(true)
     const [navIsActive, setNavIsActive] = useState<boolean>(false)
     const logo = '<kb/>'
 
     window.addEventListener('scroll', () => setIsHeaderVisible(window.scrollY < 400))
 
-    window.addEventListener('resize', () => window.innerWidth >= Breakpoint.Smartphone ? setNavIsActive(true) : setNavIsActive(false))
+    window.addEventListener('resize', () => {
+        setNavIsActive(window.innerWidth >= Breakpoint.Smartphone)
+        setIsDesktop(window.innerWidth >= Breakpoint.Smartphone)
+    })
 
     useLayoutEffect(() => {
-        window.innerWidth >= Breakpoint.Smartphone ? setNavIsActive(true) : setNavIsActive(false)
+        setNavIsActive(window.innerWidth >= Breakpoint.Smartphone)
+        setIsDesktop(window.innerWidth >= Breakpoint.Smartphone)
     }, [])
 
     return (
@@ -31,7 +37,7 @@ const Header: React.FC = () => {
             <div className='logo'>
                 <a href='/' className='logo__sign'>{logo}</a>
             </div>
-            <Nav state={{ navIsActive, setNavIsActive }} />
+            <Nav state={{ navIsActive, setNavIsActive, isDesktop }} />
         </header >
     )
 }

@@ -7,8 +7,8 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import './Nav.scss'
 
 const Nav: React.FC<{ state: State }> = ({ state }) => {
-    const { navIsActive, setNavIsActive } = state
-    const handleHamburger = (): void => setNavIsActive(!navIsActive)
+    const { navIsActive, setNavIsActive, isDesktop } = state
+    const handleNav = (): void => setNavIsActive(!navIsActive)
 
     const sections = ['about', 'projects', 'contact', 'resume']
 
@@ -24,17 +24,23 @@ const Nav: React.FC<{ state: State }> = ({ state }) => {
         whileHover: { scale: 1.2 }
     }
 
-    const navElements = sections.map(section => (
+    const navElements = sections.map((section, index) => (
         <motion.li
+            key={`nav-element-${index}`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.8 }}
             variants={framerElement}
-            className='nav__element'><a href={`#${section}`} className='nav__link'>{section}</a></motion.li>
+            className='nav__element'>
+            <a href={`#${section}`}
+                onClick={isDesktop ? undefined : handleNav}
+                className='nav__link'>{section}
+            </a>
+        </motion.li>
     ))
 
     return (
         <nav>
-            <div className='hamburger' onClick={handleHamburger}>
+            <div className='hamburger' onClick={handleNav}>
                 {navIsActive ?
                     <FontAwesomeIcon icon={faXmark} className='hamburger__xmark' />
                     :

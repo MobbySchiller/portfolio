@@ -16,6 +16,7 @@
     z-index: 2;
 
     &--active-nav {
+        top: 0 !important;
         background-color: $nav-blue;
 
         @include mq(sm) {
