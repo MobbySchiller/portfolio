@@ -18,7 +18,7 @@ const Header: React.FC = () => {
     const [navIsActive, setNavIsActive] = useState<boolean>(false)
     const logo = '<kb/>'
 
-    window.addEventListener('scroll', () => setIsHeaderVisible(window.scrollY < 400))
+    window.addEventListener('scroll', () => setIsHeaderVisible(window.scrollY < window.innerHeight - 200))
 
     window.addEventListener('resize', () => {
         setNavIsActive(window.innerWidth >= Breakpoint.Smartphone)
@@ -32,7 +32,9 @@ const Header: React.FC = () => {
 
     return (
         <header
-            style={isHeaderVisible ? { top: 0 } : { top: '-60px' }}
+            style={
+                isHeaderVisible ? { top: 0 } : { top: '-60px' }
+            }
             className={`header ${navIsActive ? 'header--active-nav' : ''}`}>
             <div className='logo'>
                 <a href='/' className='logo__sign'>{logo}</a>

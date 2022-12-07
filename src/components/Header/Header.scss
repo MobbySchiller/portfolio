@@ -12,11 +12,11 @@
     height: 60px;
     padding: 10px;
     backdrop-filter: blur(12px);
-    transition: top .4s;
+    transition: top .2s;
     z-index: 2;
 
     &--active-nav {
-        top: 0 !important;
+        top: 0;
         background-color: $nav-blue;
 
         @include mq(sm) {
