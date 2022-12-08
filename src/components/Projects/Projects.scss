@@ -1,0 +1,71 @@
+@import '../../sass/_variables.scss';
+
+.projects {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    margin-left: 10px;
+    border-radius: $card-radius;
+    background-color: rgba(200, 200, 200, 10%);
+}
+
+.card__img-container {
+    border-top-left-radius: $card-radius;
+    border-top-right-radius: $card-radius;
+    overflow: hidden;
+}
+
+.card__img {
+    cursor: pointer;
+
+    &:hover {
+        scale: 1.1;
+    }
+}
+
+.card__name {
+    padding: $card-padding;
+    color: $white;
+    font-size: 20px;
+}
+
+.card__description {
+    padding: 6px $card-padding;
+    color: $light-blue;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.card__technologies {
+    display: flex;
+    padding: 0 $card-padding;
+}
+
+.card__technology {
+    margin-right: 4px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background-color: $bright-blue;
+    color: $white;
+    font-size: 12px;
+}
+
+.card__links {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    display: flex;
+}
+
+.card__link {
+    margin-left: 10px;
+    color: $white;
+    font-size: 24px;
+    text-decoration: none;
+}
