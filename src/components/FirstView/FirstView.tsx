@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Blob from '../Blob/Blob'
 import './FirstView.scss'
 
 const FirstView: React.FC = () => {
@@ -14,6 +15,7 @@ const FirstView: React.FC = () => {
                 <span className='intro__occupation'>Beginner front-end developer.</span>
                 <p className='intro__description'>Welcome on my website. This is the place where you will find information about me and my path to becoming a front-end developer.</p>
             </motion.div>
+            <Blob />
         </div>
     )
 }
