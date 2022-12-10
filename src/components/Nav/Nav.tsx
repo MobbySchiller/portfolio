@@ -1,16 +1,11 @@
-import React from 'react'
+import { FC, useState } from 'react'
 import { motion, Variants } from 'framer-motion'
-import { State } from '../Header/Header'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-scroll'
 import './Nav.scss'
 
-const Nav: React.FC<{ state: State }> = ({ state }) => {
-    const { navIsActive, setNavIsActive, isDesktop } = state
-    const handleNav = (): void => setNavIsActive(!navIsActive)
-
-    const sections = ['about', 'projects', 'contact', 'resume']
+const Nav: FC = () => {
+    const [isNavActive, setIsNavActive] = useState<boolean>(false)
+    const sections: string[] = ['home', 'about', 'projects', 'contact']
 
     const framerList: Variants = {
         visible: {
@@ -26,35 +21,48 @@ const Nav: React.FC<{ state: State }> = ({ state }) => {
     const navElements: JSX.Element[] = sections.map((section, index) => (
         <motion.li
             key={`nav-element-${index}`}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.8 }}
             variants={framerElement}
             className='nav__element'>
-            <a href={`#${section}`}
-                onClick={isDesktop ? undefined : handleNav}
-                className='nav__link'>{section}
-            </a>
+            <Link
+                to={section}
+                spy={true}
+                offset={-50}
+                duration={400}
+                activeClass='nav__link--active'
+                className=' nav__link'
+                onClick={() => setIsNavActive(!isNavActive)}
+            >{section}
+            </Link>
         </motion.li>
     ))
 
     return (
         <nav>
-            <div className='hamburger' onClick={handleNav}>
-                {navIsActive ?
-                    <FontAwesomeIcon icon={faXmark} className='hamburger__xmark' />
-                    :
-                    <FontAwesomeIcon icon={faBars} className='hamburger__bars' />}
+            <div
+                className='nav-btn'
+                onClick={() => setIsNavActive(!isNavActive)}>
+                <input
+                    type='checkbox'
+                    className='nav-btn__checkbox'
+                    readOnly
+                    checked={isNavActive}
+                />
+                <div className='nav-btn__bun'>
+                    <div className='nav-btn__hamburger'></div>
+                </div>
             </div>
-            {navIsActive &&
-                <motion.ul
-                    variants={framerList}
-                    initial='hidden'
-                    animate='visible'
-                    className='nav__list'>
-                    {navElements}
-                </motion.ul>
-            }
-        </nav>
+            <div
+                className={`nav__background ${isNavActive ? 'nav__background--active' : ''}`}
+                onClick={() => setIsNavActive(!isNavActive)}>
+            </div>
+            <motion.ul
+                variants={framerList}
+                initial='hidden'
+                animate='visible'
+                className={`nav__list ${isNavActive ? 'nav__list--active' : ''}`}>
+                {navElements}
+            </motion.ul>
+        </nav >
     )
 }
 

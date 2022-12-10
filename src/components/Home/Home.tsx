@@ -1,12 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Blob from '../Blob/Blob'
-import './FirstView.scss'
+import './Home.scss'
 
-const FirstView: React.FC = () => {
+const Home: React.FC = () => {
     return (
         <div
-            className='first-view'>
+            className='first-view'
+            id='home'>
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }} className='intro'>
@@ -20,4 +21,4 @@ const FirstView: React.FC = () => {
     )
 }
 
-export default FirstView
+export default Home

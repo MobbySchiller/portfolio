@@ -1,54 +1,141 @@
 @import '../../sass/_variables.scss';
 @import '../../sass/_mixins.scss';
 
-
-.hamburger {
+.nav-btn {
+    display: block;
     position: relative;
-    width: 30px;
-    aspect-ratio: 1/1;
+    width: $hamburger-size;
+    height: $hamburger-size;
+    z-index: 999;
 
     @include mq(sm) {
         display: none;
     }
+
+    .nav-btn__bun {
+        &:before {
+            @include pill();
+            top: 10%;
+            right: 0;
+        }
+
+        &:after {
+            @include pill();
+            bottom: 10%;
+            left: 0;
+        }
+
+        .nav-btn__hamburger {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            height: $hamburger-size;
+            width: $hamburger-size;
+
+            &:before,
+            &:after {
+                @include pill();
+            }
+        }
+    }
+
+    .nav-btn__checkbox {
+        display: block;
+        position: absolute;
+        opacity: 0;
+        z-index: 1;
+        width: $hamburger-size;
+        height: $hamburger-size;
+        cursor: pointer;
+
+        &:hover~.nav-btn__bun {
+
+            &:before,
+            &:after,
+            :before,
+            :after {
+                background: darken($hamburger-color, 5);
+            }
+        }
+
+        &:checked~.nav-btn__bun {
+
+            &:before,
+            &:after {
+                width: 0;
+            }
+
+            .nav-btn__hamburger {
+                &:before {
+                    transform: rotate(135deg);
+                }
+
+                &:after {
+                    transform: rotate(45deg);
+                    box-shadow: 0 0 0 0 lighten($hamburger-color, 35);
+                }
+            }
+        }
+    }
+
 }
 
-.hamburger__bars,
-.hamburger__xmark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: $white;
-}
-
-.hamburger__bars {
-    font-size: 3rem;
-}
-
-.hamburger__xmark {
-    font-size: 3.4rem;
-}
-
-.nav__list {
+.nav__background {
+    display: block;
     position: fixed;
-    top: 60px;
+    top: 0;
     left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     height: 100vh;
-    padding: 50px 10px;
-    background-color: $nav-blue;
-    text-transform: uppercase;
-    list-style: none;
+    background-color: rgba(100, 100, 100, 0.5);
+    backdrop-filter: blur(5px);
+    visibility: hidden;
 
     @include mq(sm) {
         position: unset;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        backdrop-filter: blur(0);
+        visibility: visible;
+    }
+
+    &--active {
+        visibility: visible;
+    }
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -275px;
+    width: 70%;
+    max-width: 275px;
+    height: 100vh;
+    padding-top: 100px;
+    background-color: $nav-blue;
+    box-shadow: 0 1px 8px 1px #222222;
+    text-transform: uppercase;
+    list-style: none;
+    transition: right .3s;
+
+    @include mq(sm) {
         flex-direction: row;
+        align-items: center;
+        position: unset;
+        width: auto;
+        max-width: none;
         height: auto;
         padding: 0;
+        box-shadow: 0 0 0 0;
         background-color: transparent;
+    }
+
+    &--active {
+        right: 0;
     }
 }
 
@@ -66,27 +153,47 @@
 }
 
 .nav__link {
+    position: relative;
     width: 100%;
     height: 100%;
-    color: $white;
-    font-size: 2.4rem;
+    color: darken($white, 30%);
+    font-size: 1.8rem;
     font-weight: 700;
     text-decoration: none;
+    cursor: pointer;
 
     @include mq(sm) {
         font-size: 16px;
     }
-}
 
-.nav__element:nth-last-child(1) .nav__link {
+    &:hover {
+        color: $white;
+    }
 
-    @include mq(sm) {
-        padding: 6px 12px;
-        border: 1px solid $bright-blue;
-        border-radius: 6px;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        display: block;
+        width: 0;
+        height: 3px;
+        background-color: $bright-blue;
+        transition: .3s;
+    }
 
-        &:hover {
-            background-color: $bright-blue;
+    &--active {
+        color: $white;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            display: block;
+            width: 100%;
+            height: 3px;
+            transition: width .3s;
         }
     }
+
+
 }

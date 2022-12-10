@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../Header/Header'
-import FirstView from '../FirstView/FirstView'
+import Home from '../Home/Home'
 import Main from '../Main/Main'
 import Footer from '../Footer/Footer'
 const Page: React.FC = () => {
@@ -8,7 +8,7 @@ const Page: React.FC = () => {
     return (
         <>
             <Header />
-            <FirstView />
+            <Home />
             <Main />
             <Footer />
         </>

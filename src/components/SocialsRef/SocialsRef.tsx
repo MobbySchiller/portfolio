@@ -17,10 +17,12 @@ const SocialsRef: FC = () => {
         hidden: { x: '100%' }
     }
 
-    const platforms = socials.map(social => {
+    const platforms = socials.map((social, index) => {
         const { link, icon } = social
         return (
-            <motion.a href={link}
+            <motion.a
+                key={`social-${index}`}
+                href={link}
                 variants={framerLink}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

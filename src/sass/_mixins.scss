@@ -1,8 +1,8 @@
 @mixin mq($breakpoint) {
-    $size: map-get($breakpoints, $breakpoint);
+    $hamburger-size: map-get($breakpoints, $breakpoint);
 
-    @if($size) {
-        @media (min-width: $size) {
+    @if($hamburger-size) {
+        @media (min-width: $hamburger-size) {
             @content;
         }
     }
@@ -16,4 +16,17 @@
 
 @mixin background-gradient {
     background: linear-gradient(to right, rgba(21, 45, 64, 1) 0%, rgba(21, 45, 64, 0) 100%);
+}
+
+;
+
+
+@mixin pill() {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    background: $hamburger-color;
+    border-radius: $hamburger-size;
+    transition: all .5s cubic-bezier(.1, .9, 0, 1.2);
 }
