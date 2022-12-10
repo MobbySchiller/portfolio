@@ -4,68 +4,30 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-}
-
-.card {
-    position: relative;
-    width: 300px;
-    height: 450px;
-    margin-left: 10px;
-    border-radius: $card-radius;
-    background-color: rgba(200, 200, 200, 10%);
-}
-
-.card__img-container {
-    border-top-left-radius: $card-radius;
-    border-top-right-radius: $card-radius;
     overflow: hidden;
 }
 
-.card__img {
-    cursor: pointer;
+.gh-ref__wrapper {
+    max-width: 900px;
+    margin: 20px auto 0;
+    border-radius: $card-radius;
+    background-color: rgba(75, 75, 75, 30%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.gh-ref__text {
+    padding: 20px 0;
+    color: $light-blue;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.gh-ref__link {
+    color: $bright-blue;
+    font-weight: 700;
+    text-decoration: none;
 
     &:hover {
-        scale: 1.1;
+        color: darken($bright-blue, 10%)
     }
-}
-
-.card__name {
-    padding: $card-padding;
-    color: $white;
-    font-size: 20px;
-}
-
-.card__description {
-    padding: 6px $card-padding;
-    color: $light-blue;
-    font-size: 14px;
-    text-align: justify;
-}
-
-.card__technologies {
-    display: flex;
-    padding: 0 $card-padding;
-}
-
-.card__technology {
-    margin-right: 4px;
-    padding: 2px 8px;
-    border-radius: 6px;
-    background-color: $bright-blue;
-    color: $white;
-    font-size: 12px;
-}
-
-.card__links {
-    position: absolute;
-    left: 8px;
-    bottom: 8px;
-    display: flex;
-}
-
-.card__link {
-    margin-left: 10px;
-    color: $white;
-    font-size: 24px;
-    text-decoration: none;
 }

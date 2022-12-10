@@ -1,44 +1,42 @@
 import { FC } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
-import './Projects.scss'
+import { motion, Variants } from 'framer-motion'
+import ProjectCard from '../ProjectCard/ProjectCard'
 import { projects } from '../../projectsData'
+import './Projects.scss'
 
 const Projects: FC = () => {
-
-    const cards = projects.map((project, index) => {
-        const { name, description, technologies, demo, github, img } = project
-        return (
-            <div className='card' key={`project-${index}`}>
-                <div className='card__img-container'>
-                    <a href={demo}>
-                        <img src={img} alt={`${name}-img`} className='card__img' />
-                    </a>
-                </div>
-                <h3 className='card__name'>{name}</h3>
-                <div className='card__technologies'>
-                    {technologies.map((technology, index) => <span className='card__technology' key={`technology-${index}`}>{technology}</span>)}
-                </div>
-                <p className='card__description'>{description}</p>
-                <div className='card__links'>
-                    <a href={demo} className="card__link"> <FontAwesomeIcon icon={faLink} />
-                    </a>
-                    <a href={github} className="card__link"> <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                </div>
-            </div >
-        )
-    })
-
-
+    const cardVariants: Variants = {
+        offscreen: {
+            opacity: 0,
+            y: 100,
+        },
+        onscreen: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                type: "spring",
+                bounce: 0.2,
+                duration: 0.6
+            }
+        }
+    }
     return (
         <section id='projects' className='section'>
             <h2 className='section__title'>Projects</h2>
-            <div className='projects'>
-                {cards}
+            <div
+                className='projects'>
+                {projects.map((project, index) => <ProjectCard key={`project-${index}`} data={project} />)}
             </div>
-        </section>
+            <motion.div
+                className='gh-ref'
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0.4 }}>
+                <motion.div className='gh-ref__wrapper' variants={cardVariants}>
+                    <p className='gh-ref__text'>Visit my <a href="https://github.com/MobbySchiller" className='gh-ref__link'>GitHub profile</a> to see more projects</p>
+                </motion.div>
+            </motion.div>
+        </section >
     )
 }
 

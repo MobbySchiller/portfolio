@@ -1,0 +1,81 @@
+@import '../../sass/_variables.scss';
+
+.card__wrapper {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px 5px 0;
+    border-radius: $card-radius;
+    background-color: rgba(75, 75, 75, 30%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card__img-container {
+    width: 300px;
+    height: 200px;
+    border-top-left-radius: $card-radius;
+    border-top-right-radius: $card-radius;
+    overflow: hidden;
+}
+
+.card__img {
+    opacity: 0.45;
+}
+
+.card__name {
+    padding: 20px $card-padding 0;
+    color: $white;
+    font-size: 2rem;
+}
+
+.card__description {
+    padding: 6px $card-padding;
+    color: $light-blue;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.card__technologies {
+    display: flex;
+    margin: 4px 0 10px;
+    padding: 0 $card-padding;
+}
+
+.card__technology {
+    margin-right: 4px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    border: 1px solid $bright-blue;
+    background-color: lighten($light-blue, 10%);
+    color: $bright-blue;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.card__links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+}
+
+.card__link {
+    width: 36px;
+    aspect-ratio: 1/1;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: $white;
+    color: $bright-blue;
+    font-size: 2.4rem;
+    text-decoration: none;
+    line-height: 36px;
+    text-align: center;
+    transition: .2s;
+
+    &:hover {
+        background-color: darken($white, 25%);
+        color: $nav-blue;
+    }
+}
