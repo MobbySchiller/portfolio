@@ -1,0 +1,45 @@
+@import '../../sass/_variables.scss';
+@import '../../sass/_mixins.scss';
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    margin: 0 auto;
+
+
+    @include mq(xl) {
+        justify-content: unset;
+        align-items: unset;
+        flex-direction: column;
+        position: fixed;
+        top: 80%;
+        right: 1%;
+        width: auto;
+        transform: translateY(-80%);
+    }
+}
+
+.socials__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin-top: 14px;
+    border-radius: 50%;
+    background-color: darken($bright-blue, 10%);
+    color: $white;
+    font-size: 30px;
+    overflow: hidden;
+
+    &:hover {
+        background-color: darken($bright-blue, 20%);
+        color: darken($white, 20%);
+    }
+}
+
+.socials__icon {
+    padding: 14px;
+}

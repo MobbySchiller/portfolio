@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { motion, Variants } from 'framer-motion'
 import ProjectCard from '../ProjectCard/ProjectCard'
-import { projects } from '../../projectsData'
+import { projects } from '../../data'
 import './Projects.scss'
 
 const Projects: FC = () => {

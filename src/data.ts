@@ -1,3 +1,13 @@
+import { IconProp } from '@fortawesome/fontawesome-svg-core'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
+interface Socials {
+    name: string
+    link: string
+    icon: IconProp
+}
+
 export const projects = [
     {
         name: 'Planets Facts',
@@ -47,4 +57,17 @@ export const projects = [
         github: 'https://github.com/MobbySchiller/password-generator',
         img: 'assets/projects/password-generator.jpg'
     },
+]
+
+export const socials: Socials[] = [
+    {
+        name: 'github',
+        link: 'https://github.com/MobbySchiller',
+        icon: faGithub
+    },
+    {
+        name: 'linkedin',
+        link: 'https://www.linkedin.com/in/krzysztof-burzy%C5%84ski-86bb79190/',
+        icon: faLinkedin
+    }
 ]

@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { State } from '../Header/Header'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
@@ -12,19 +12,18 @@ const Nav: React.FC<{ state: State }> = ({ state }) => {
 
     const sections = ['about', 'projects', 'contact', 'resume']
 
-    const framerList = {
+    const framerList: Variants = {
         visible: {
             transition: { staggerChildren: .1 }
         }
     }
 
-    const framerElement = {
+    const framerElement: Variants = {
         visible: { opacity: 1, y: 0 },
         hidden: { opacity: 0, y: '100%' },
-        whileHover: { scale: 1.2 }
     }
 
-    const navElements = sections.map((section, index) => (
+    const navElements: JSX.Element[] = sections.map((section, index) => (
         <motion.li
             key={`nav-element-${index}`}
             whileHover={{ scale: 1.1 }}

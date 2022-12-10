@@ -11,3 +11,9 @@
         @error '"#{$breakpoint}" - error'
     }
 }
+
+;
+
+@mixin background-gradient {
+    background: linear-gradient(to right, rgba(21, 45, 64, 1) 0%, rgba(21, 45, 64, 0) 100%);
+}
