@@ -7,58 +7,58 @@ const TechnologiesCarousel: FC = () => {
         <div className="slider">
             <div className="slide-track">
                 <div className="slide">
-                    <img src='../../../assets/html5.svg' alt='HTML5' />
+                    <img src='assets/technologies/html5.svg' alt='HTML5' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/css3.svg' alt='CSS3' />
+                    <img src='assets/technologies/css3.svg' alt='CSS3' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/javascript.svg' alt='Javascript' />
+                    <img src='assets/technologies/javascript.svg' alt='Javascript' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/typescript.svg' alt='Typescript' />
+                    <img src='assets/technologies/typescript.svg' alt='Typescript' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/react.svg' alt='React' />
+                    <img src='assets/technologies/react.svg' alt='React' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/sass.svg' alt='Sass' />
+                    <img src='assets/technologies/sass.svg' alt='Sass' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/npm.svg' alt='NPM' />
+                    <img src='assets/technologies/npm.svg' alt='NPM' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/mui.svg' alt='Material UI' />
+                    <img src='assets/technologies/mui.svg' alt='Material UI' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/webpack.svg' alt='Webpack' />
+                    <img src='assets/technologies/webpack.svg' alt='Webpack' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/html5.svg' alt='HTML5' />
+                    <img src='assets/technologies/html5.svg' alt='HTML5' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/css3.svg' alt='CSS3' />
+                    <img src='assets/technologies/css3.svg' alt='CSS3' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/javascript.svg' alt='Javascript' />
+                    <img src='assets/technologies/javascript.svg' alt='Javascript' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/typescript.svg' alt='Typescript' />
+                    <img src='assets/technologies/typescript.svg' alt='Typescript' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/react.svg' alt='React' />
+                    <img src='assets/technologies/react.svg' alt='React' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/sass.svg' alt='Sass' />
+                    <img src='assets/technologies/sass.svg' alt='Sass' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/npm.svg' alt='NPM' />
+                    <img src='assets/technologies/npm.svg' alt='NPM' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/mui.svg' alt='Material UI' />
+                    <img src='assets/technologies/mui.svg' alt='Material UI' />
                 </div>
                 <div className="slide">
-                    <img src='../../../assets/webpack.svg' alt='Webpack' />
+                    <img src='assets/technologies/webpack.svg' alt='Webpack' />
                 </div>
             </div>
         </div>

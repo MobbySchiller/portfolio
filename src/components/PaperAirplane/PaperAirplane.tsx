@@ -11,11 +11,6 @@ const PaperAirplane: FC = () => {
                 <div className="plane__top"></div>
                 <div className="plane__middle"></div>
             </div>
-            <div className="clouds">
-                <div className="clouds__cloudOne"></div>
-                <div className="clouds__cloudTwo"></div>
-                <div className="clouds__cloudThree"></div>
-            </div>
         </div>
     )
 }

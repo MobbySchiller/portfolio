@@ -1,0 +1,30 @@
+.title {
+    position: relative;
+    padding-bottom: 4px;
+    padding-left: 70px;
+    color: $title-color;
+    font-size: clamp(2.2rem, 3vw, 2.6rem);
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 45%;
+        left: 0;
+        transform: translateY(-45%);
+        width: 55px;
+        height: 2px;
+        background-color: $bright-blue;
+    }
+}
+
+.subtitle {
+    color: darken($title-color, 10%);
+    font-size: 1.8rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 300;
+    text-transform: uppercase;
+}

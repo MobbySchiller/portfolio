@@ -8,7 +8,7 @@ const Projects: FC = () => {
     const cardVariants: Variants = {
         offscreen: {
             opacity: 0,
-            y: 100,
+            y: 70,
         },
         onscreen: {
             opacity: 1,
@@ -22,7 +22,13 @@ const Projects: FC = () => {
     }
     return (
         <section id='projects' className='section'>
-            <h2 className='section__title'>Projects</h2>
+            <motion.h2
+                className='title'
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0, transition: { duration: .6 } }}
+                viewport={{ once: true, amount: 0.8 }}>
+                Projects
+            </motion.h2>
             <div
                 className='projects'>
                 {projects.map((project, index) => <ProjectCard key={`project-${index}`} data={project} />)}

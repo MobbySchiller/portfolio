@@ -13,8 +13,13 @@ const SocialsRef: FC = () => {
     }
 
     const framerLink: Variants = {
-        visible: { x: 0 },
-        hidden: { x: '100%' }
+        visible: {
+            x: 0,
+            transition: {
+                delay: .8
+            }
+        },
+        hidden: { x: '100' }
     }
 
     const platforms = socials.map((social, index) => {

@@ -12,7 +12,7 @@
     height: 60px;
     padding: 10px;
     transition: .3s;
-    z-index: 2;
+    z-index: 999;
 
     &--visible {
         background-color: #011627;

@@ -1,8 +1,16 @@
 @import '../../sass/_variables.scss';
 @import '../../sass/_mixins.scss';
 
-.about__content {
+.about {
+    max-width: 550px;
     margin-top: 10px;
+    margin-bottom: 45px;
     color: $white;
-    font-size: 1.8rem
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    text-align: justify;
+}
+
+.about__paragraph {
+    margin-top: 28px;
 }

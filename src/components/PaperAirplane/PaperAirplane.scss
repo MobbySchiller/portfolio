@@ -8,18 +8,16 @@
         display: block;
         position: relative;
         overflow: hidden;
-        width: 400px;
-        height: 400px;
-        background-color: $bright-blue;
-        border-radius: 50%;
+        width: 450px;
+        height: 120px;
     }
 }
 
 .plane {
     position: absolute;
-    left: 200px;
-    top: 150px;
-    animation: fly 3s linear infinite;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fly 8s linear infinite;
 }
 
 @keyframes fly {
@@ -104,62 +102,4 @@
     left: -18.5px;
     z-index: 3;
     top: -30px;
-}
-
-.clouds {
-    position: absolute;
-    top: 50px;
-    left: 100px;
-}
-
-@keyframes cloud {
-    from {
-        left: -150px;
-    }
-
-    to {
-        left: 400px;
-    }
-}
-
-.clouds__cloudOne,
-.clouds__cloudTwo,
-.clouds__cloudThree {
-    position: absolute;
-    width: 50px;
-    height: 25px;
-    background-color: #ffffff;
-    border-radius: 100px 100px 0 0;
-}
-
-.clouds__cloudOne {
-    top: 0;
-    left: 0;
-    animation: cloud 3s linear infinite reverse;
-}
-
-.clouds__cloudTwo {
-    top: 50px;
-    left: 100px;
-    animation: cloud 2.5s linear infinite reverse;
-}
-
-.clouds__cloudThree {
-    top: 250px;
-    left: 50px;
-    animation: cloud 2.8s linear infinite reverse;
-}
-
-.clouds__cloudOne:before,
-.clouds__cloudTwo:before,
-.clouds__cloudThree:before {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 12.5px;
-    background-color: #ffffff;
-    border-radius: 100px 100px 0 0;
-    left: -20px;
-    top: 12.5px;
-    box-shadow: 65px 0 #ffffff;
 }
