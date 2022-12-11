@@ -1,9 +1,8 @@
 import React, { FC, useState } from 'react'
 import PaperAirplane from '../PaperAirplane/PaperAirplane'
+import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import './Contact.scss'
-
-console.log(import.meta.env.VITE_SERVICE_ID)
 
 interface Email {
     name: string
@@ -103,10 +102,12 @@ const Contact: FC = () => {
                             onBlur={() => setFocused({ ...focused, message: true })} />
                         <span>Your message is empty</span>
                     </div>
-                    <button
+                    <motion.button
                         type='submit'
                         className='form__button'
-                    >Send</button>
+                        whileTap={{ scale: 0.95 }}
+                    >Send
+                    </motion.button>
                 </form>
                 <div className='paperplane-wrapper'>
                     <PaperAirplane />
