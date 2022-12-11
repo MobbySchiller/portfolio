@@ -1,6 +1,22 @@
 @import '../../sass/_variables.scss';
 @import '../../sass/_mixins.scss';
 
+.contact {
+    display: flex;
+    justify-content: center;
+
+    @include mq(lg) {
+        justify-content: space-evenly;
+    }
+}
+
+.paperplane-wrapper {
+    // flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .form {
     margin-top: 20px;
 }
@@ -29,7 +45,7 @@
         outline-color: $bright-blue;
 
         @include mq(sm) {
-            max-width: 550px;
+            width: 550px;
         }
 
         &:invalid[focused="true"] {
