@@ -60,10 +60,12 @@ const ProjectCard: FC<{ data: Data }> = ({ data }) => {
                 <div className='card__links'>
                     <a
                         href={demo}
-                        className='card__link'>
+                        className='card__link'
+                        target='_blank'>
                         <FontAwesomeIcon icon={faLink} />
                     </a>
-                    <a href={github}
+                    <a
+                        href={github}
                         className='card__link'
                         target='_blank'>
                         <FontAwesomeIcon icon={faGithub} />
