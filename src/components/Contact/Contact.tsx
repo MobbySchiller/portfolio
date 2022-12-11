@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react'
 import PaperAirplane from '../PaperAirplane/PaperAirplane'
-import { motion, Variants } from 'framer-motion'
+import { animate, motion, Variants } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import './Contact.scss'
 
@@ -34,23 +34,25 @@ const emailRegex = "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
 const Contact: FC = () => {
     const [toSend, setToSend] = useState<Email>(initialEmail)
     const [focused, setFocused] = useState<Focused>(initialFocused)
+    const [isSent, setIsSent] = useState<boolean>(false)
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
         const { name, email, message } = toSend
         e.preventDefault()
-        emailjs.send(
-            import.meta.env.VITE_SERVICE_ID,
-            import.meta.env.VITE_TEMPLATE_ID,
-            { name, email, message },
-            import.meta.env.VITE_PUBLIC_KEY
-        )
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-            }, function (error) {
-                console.log('FAILED...', error);
-            });
-        setToSend(initialEmail)
+        // emailjs.send(
+        //     import.meta.env.VITE_SERVICE_ID,
+        //     import.meta.env.VITE_TEMPLATE_ID,
+        //     { name, email, message },
+        //     import.meta.env.VITE_PUBLIC_KEY
+        // )
+        //     .then(function (response) {
+        //         console.log('SUCCESS!', response.status, response.text);
+        //     }, function (error) {
+        //         console.log('FAILED...', error);
+        //     });
+        // setToSend(initialEmail)
         setFocused(initialFocused)
+        setIsSent(true)
     }
 
     const cardVariants: Variants = {
@@ -65,6 +67,20 @@ const Contact: FC = () => {
                 type: "spring",
                 bounce: 0.2,
                 duration: 0.6
+            }
+        }
+    }
+
+    const paperplane: Variants = {
+        stay: {
+            x: 0,
+            y: 0
+        },
+        fly: {
+            x: '40vw',
+            y: -250,
+            transition: {
+                duration: .6
             }
         }
     }
@@ -134,9 +150,14 @@ const Contact: FC = () => {
                         >Send
                         </motion.button>
                     </form>
-                    <div className='paperplane-wrapper'>
+                    <motion.div
+                        className='paperplane-wrapper'
+                        variants={paperplane}
+                        initial='stay'
+                        animate={isSent ? 'fly' : 'stay'}
+                    >
                         <PaperAirplane />
-                    </div>
+                    </motion.div>
                 </motion.div>
             </motion.div>
         </section >
