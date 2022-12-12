@@ -61,12 +61,14 @@ const ProjectCard: FC<{ data: Data }> = ({ data }) => {
                     <a
                         href={demo}
                         className='card__link'
+                        aria-label='Check project demo'
                         target='_blank'>
                         <FontAwesomeIcon icon={faLink} />
                     </a>
                     <a
                         href={github}
                         className='card__link'
+                        aria-label='Check project code'
                         target='_blank'>
                         <FontAwesomeIcon icon={faGithub} />
                     </a>

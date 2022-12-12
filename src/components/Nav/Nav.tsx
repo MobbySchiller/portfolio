@@ -44,6 +44,7 @@ const Nav: FC = () => {
                 <input
                     type='checkbox'
                     className='nav-btn__checkbox'
+                    aria-label='hamburger'
                     readOnly
                     checked={isNavActive}
                 />

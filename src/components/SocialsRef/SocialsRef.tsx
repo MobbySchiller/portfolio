@@ -31,7 +31,8 @@ const SocialsRef: FC = () => {
                 variants={framerLink}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className='socials__link' >
+                className='socials__link'
+                aria-label='Visit my social-media'>
                 <FontAwesomeIcon icon={icon} className='socials__icon' />
             </motion.a >
         )
