@@ -42,36 +42,42 @@ const ProjectCard: FC<{ data: Data }> = ({ data }) => {
                 className='card__wrapper'
                 variants={cardVariants}>
                 <div className='card__img-container'>
-                    <img src={img}
+                    <img
+                        src={img}
                         alt={`${name}-img`}
-                        className='card__img' />
+                        className='card__img'
+                    />
                 </div>
-                <h3 className='card__name'>{name}</h3>
-                <div className='card__technologies'>
-                    {technologies.map((technology, index) => (
-                        <span
-                            className='card__technology'
-                            key={`technology-${index}`}>
-                            {technology}
-                        </span>)
-                    )}
-                </div>
-                <p className='card__description'>{description}</p>
-                <div className='card__links'>
-                    <a
-                        href={demo}
-                        className='card__link'
-                        aria-label='Check project demo'
-                        target='_blank'>
-                        <FontAwesomeIcon icon={faLink} />
-                    </a>
-                    <a
-                        href={github}
-                        className='card__link'
-                        aria-label='Check project code'
-                        target='_blank'>
-                        <FontAwesomeIcon icon={faGithub} />
-                    </a>
+                <div className='card__info'>
+                    <div className='project-info'>
+                        <h3 className='project-info__name'>{name}</h3>
+                        <div className='project-info__technologies'>
+                            {technologies.map((technology, index) => (
+                                <span
+                                    className='project-info__technology'
+                                    key={`technology-${index}`}>
+                                    {technology}
+                                </span>)
+                            )}
+                        </div>
+                        <p className='project-info__description'>{description}</p>
+                    </div>
+                    <div className='project-links'>
+                        <a
+                            href={demo}
+                            className='project-links__link'
+                            aria-label='Check project demo'
+                            target='_blank'>
+                            demo
+                        </a>
+                        <a
+                            href={github}
+                            className='project-links__link'
+                            aria-label='Check project code'
+                            target='_blank'>
+                            code
+                        </a>
+                    </div>
                 </div>
             </motion.div >
         </motion.div >

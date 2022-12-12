@@ -29,15 +29,16 @@
     aspect-ratio: 1/1;
     margin-top: 14px;
     border-radius: 50%;
-    background-color: darken($bright-blue, 10%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background: linear-gradient(50deg, $bright-blue, darken($bright-blue, 12%) 70%);
     color: $white;
     font-size: 30px;
     overflow: hidden;
     z-index: 4;
 
     &:hover {
-        background-color: darken($bright-blue, 20%);
-        color: darken($white, 20%);
+        background: linear-gradient(50deg, darken($bright-blue, 12%), darken($bright-blue, 22%) 70%);
+        color: darken($white, 10%)
     }
 }
 

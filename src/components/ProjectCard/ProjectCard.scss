@@ -3,7 +3,7 @@
 .card__wrapper {
     position: relative;
     width: 300px;
-    height: 400px;
+    height: 450px;
     margin: 20px 5px 0;
     border-radius: $card-radius;
     background-color: rgba(75, 75, 75, 15%);
@@ -22,26 +22,31 @@
     opacity: 0.45;
 }
 
-.card__name {
-    padding: 20px $card-padding 0;
+.card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+    padding: 20px 16px;
+}
+
+.project-info__name {
     color: $white;
     font-size: 2rem;
 }
 
-.card__description {
-    padding: 6px $card-padding;
+.project-info__description {
     color: $light-blue;
     font-size: 1.4rem;
     text-align: justify;
 }
 
-.card__technologies {
+.project-info__technologies {
     display: flex;
     margin: 4px 0 10px;
-    padding: 0 $card-padding;
 }
 
-.card__technology {
+.project-info__technology {
     margin-right: 4px;
     padding: 2px 8px;
     border-radius: 6px;
@@ -52,30 +57,25 @@
     font-weight: 700;
 }
 
-.card__links {
+.project-links {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    display: flex;
+    justify-content: space-between;
 }
 
-.card__link {
-    width: 36px;
-    aspect-ratio: 1/1;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    background-color: $white;
-    color: $bright-blue;
-    font-size: 2.4rem;
+.project-links__link {
+    padding: 10px 40px;
+    border-radius: $form-radius;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background: linear-gradient(50deg, $bright-blue, darken($bright-blue, 12%) 70%);
+    color: $white;
+    font-size: 1.8rem;
     text-decoration: none;
-    line-height: 36px;
     text-align: center;
     transition: .2s;
+    cursor: pointer;
 
     &:hover {
-        background-color: darken($white, 25%);
-        color: $nav-blue;
+        background: linear-gradient(50deg, darken($bright-blue, 12%), darken($bright-blue, 22%) 70%);
+        color: darken($white, 10%)
     }
 }
