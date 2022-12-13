@@ -29,19 +29,21 @@ const Projects: FC = () => {
                 viewport={{ once: true, amount: 0.8 }}>
                 Projects
             </motion.h2>
-            <div
-                className='projects'>
-                {projects.map((project, index) => <ProjectCard key={`project-${index}`} data={project} />)}
-            </div>
-            <motion.div
-                className='gh-ref'
-                initial="offscreen"
-                whileInView="onscreen"
-                viewport={{ once: true, amount: 0.4 }}>
-                <motion.div className='gh-ref__wrapper' variants={cardVariants}>
-                    <p className='gh-ref__text'>Visit my <a href="https://github.com/MobbySchiller" className='gh-ref__link'>GitHub profile</a> to see more projects</p>
+            <div className='section__wrapper'>
+                <div
+                    className='projects'>
+                    {projects.map((project, index) => <ProjectCard key={`project-${index}`} data={project} />)}
+                </div>
+                <motion.div
+                    className='gh-ref'
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0.4 }}>
+                    <motion.div className='gh-ref__wrapper' variants={cardVariants}>
+                        <p className='gh-ref__text'>Visit my <a href="https://github.com/MobbySchiller" className='gh-ref__link'>GitHub profile</a> to see more projects</p>
+                    </motion.div>
                 </motion.div>
-            </motion.div>
+            </div>
         </section >
     )
 }

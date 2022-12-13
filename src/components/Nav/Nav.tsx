@@ -26,7 +26,7 @@ const Nav: FC = () => {
             <Link
                 to={section}
                 spy={true}
-                offset={-50}
+                offset={-80}
                 duration={400}
                 activeClass='nav__link--active'
                 className=' nav__link'

@@ -8,6 +8,9 @@
 
 .section {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
+    margin: auto;
+}
+
+.section__wrapper {
+    padding: 20px 10px 30px;
 }

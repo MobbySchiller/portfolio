@@ -85,7 +85,7 @@ const Contact: FC = () => {
                 Contact
             </motion.h2>
             <motion.div
-                className='contact'
+                className='contact section__wrapper'
                 initial="offscreen"
                 whileInView="onscreen"
                 viewport={{ once: true, amount: 0.4 }}>
