@@ -1,0 +1,41 @@
+@import '../../../sass/variables';
+@import '../../../sass/mixins';
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: $header-height;
+    padding: 10px 16px;
+    transition: .3s;
+    z-index: 999;
+
+    &--visible {
+        background-color: #011627;
+        box-shadow: 0 1px 8px 1px #000000;
+    }
+
+    @include mq(md) {
+        padding: 0 30px;
+    }
+}
+
+.logo__sign {
+    color: $white;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    @include mq(sm) {
+        font-size: 3.8rem;
+    }
+
+    @include mq(md) {
+        font-size: 4rem;
+    }
+}

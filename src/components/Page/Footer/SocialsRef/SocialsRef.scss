@@ -1,0 +1,52 @@
+@import '../../../../sass/variables';
+@import '../../../../sass/mixins';
+
+.socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    z-index: 4;
+
+
+    @include mq(xl) {
+        justify-content: unset;
+        align-items: unset;
+        flex-direction: column;
+        position: fixed;
+        top: 80%;
+        right: 1%;
+        width: auto;
+        transform: translateY(-80%);
+    }
+}
+
+.socials__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    aspect-ratio: 1/1;
+    margin-top: 14px;
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background: linear-gradient(50deg, $bright-blue, darken($bright-blue, 12%) 70%);
+    color: $white;
+    font-size: 4rem;
+    overflow: hidden;
+
+    @include mq(xl) {
+        width: 50px;
+        font-size: 3rem;
+    }
+
+    &:hover {
+        background: linear-gradient(50deg, darken($bright-blue, 12%), darken($bright-blue, 22%) 70%);
+        color: darken($white, 10%)
+    }
+}
+
+.socials__icon {
+    padding: 14px;
+}

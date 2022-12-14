@@ -1,0 +1,20 @@
+@import '../../../../../sass/variables';
+@import '../../../../../sass/mixins';
+
+.description {
+    grid-area: description;
+    justify-self: center;
+    margin-bottom: 20px;
+    color: $white;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    text-align: justify;
+
+    @include mq(lg) {
+        max-width: 550px;
+    }
+}
+
+.description__paragraph {
+    margin-bottom: 28px;
+}

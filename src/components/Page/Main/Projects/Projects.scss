@@ -1,0 +1,33 @@
+@import '../../../../sass/variables';
+
+.projects {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.gh-ref__wrapper {
+    max-width: 900px;
+    margin: 20px auto 0;
+    border-radius: $card-radius;
+    background-color: rgba(75, 75, 75, 15%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.gh-ref__text {
+    padding: 20px 0;
+    color: $light-blue;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.gh-ref__link {
+    color: $bright-blue;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+        color: darken($bright-blue, 10%)
+    }
+}

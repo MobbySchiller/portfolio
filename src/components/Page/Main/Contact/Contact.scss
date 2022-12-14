@@ -1,0 +1,21 @@
+@import '../../../../sass/variables';
+@import '../../../../sass/mixins';
+
+.contact__wrapper {
+    display: flex;
+    justify-content: center;
+
+    @include mq(lg) {
+        justify-content: space-evenly;
+    }
+}
+
+.paperplane-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(xl) {
+        position: relative;
+    }
+}

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import { FC, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import './Loader.scss'
 
-const Loader: React.FC = () => {
+const Loader: FC = () => {
     const [letterId, setLetterId] = useState<number>(0)
     const [loaderText, setLoaderText] = useState<string>('')
     const logo: string = '<kb/>'
