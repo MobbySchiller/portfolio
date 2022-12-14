@@ -15,7 +15,7 @@ export const projects = [
         technologies: ['TypeScript', 'React', 'Framer Motion'],
         demo: 'https://mobbyschiller.github.io/planets-facts/',
         github: 'https://github.com/MobbySchiller/planets-facts',
-        img: '/assets/projects/planets-facts.jpg'
+        img: '/assets/projects/planets-facts.webp'
     },
     {
         name: 'Epidemic Simulator',
@@ -23,7 +23,7 @@ export const projects = [
         technologies: ['TypeScript', 'React', 'Material UI'],
         demo: 'https://mobbyschiller.github.io/epidemic-simulator/',
         github: 'https://github.com/MobbySchiller/epidemic-simulator',
-        img: 'assets/projects/epidemic-simulator.jpg'
+        img: 'assets/projects/epidemic-simulator.webp'
     },
     {
         name: 'In Case It Rains',
@@ -31,7 +31,7 @@ export const projects = [
         technologies: ['Vanilla JS', 'Sass', 'REST API'],
         demo: 'https://mobbyschiller.github.io/epidemic-simulator/',
         github: 'https://github.com/MobbySchiller/epidemic-simulator',
-        img: 'assets/projects/in-case-it-rains.jpg'
+        img: 'assets/projects/in-case-it-rains.webp'
     },
     {
         name: 'Memory',
@@ -39,7 +39,7 @@ export const projects = [
         technologies: ['Vanilla JS', 'Sass', 'Webpack'],
         demo: 'https://www.mobbyschiller.com/',
         github: 'https://github.com/MobbySchiller/memory',
-        img: 'assets/projects/memory.jpg'
+        img: 'assets/projects/memory.webp'
     },
     {
         name: "Don't Touch the Rock",
@@ -47,7 +47,7 @@ export const projects = [
         technologies: ['Vanilla JS', 'Sass'],
         demo: 'https://mobbyschiller.github.io/',
         github: 'https://github.com/MobbySchiller/mobbyschiller.github.io',
-        img: 'assets/projects/dtr.jpg'
+        img: 'assets/projects/dtr.webp'
     },
     {
         name: "Password Generator",
@@ -55,7 +55,7 @@ export const projects = [
         technologies: ['Vanilla JS', 'Sass', 'Webpack'],
         demo: '/',
         github: 'https://github.com/MobbySchiller/password-generator',
-        img: 'assets/projects/password-generator.jpg'
+        img: 'assets/projects/password-generator.webp'
     },
 ]
 
