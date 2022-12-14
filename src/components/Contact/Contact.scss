@@ -56,12 +56,12 @@
             width: 550px;
         }
 
-        &:invalid[focused="true"] {
+        &:focus:invalid {
             box-shadow: 0 0 0 1px $form-error-color;
             outline-color: $form-error-color;
         }
 
-        &:invalid[focused="true"]~span {
+        &:focus:invalid~span {
             visibility: visible;
         }
     }

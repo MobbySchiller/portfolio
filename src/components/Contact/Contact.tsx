@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useState, FocusEvent } from 'react'
 import PaperAirplane from '../PaperAirplane/PaperAirplane'
 import { motion, Variants } from 'framer-motion'
 import emailjs from '@emailjs/browser'
@@ -23,18 +23,11 @@ const initialEmail = {
     message: ''
 }
 
-const initialFocused = {
-    name: false,
-    email: false,
-    message: false
-}
-
 const nameRegex = "^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$"
 const emailRegex = "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
 
 const Contact: FC = () => {
     const [toSend, setToSend] = useState<Email>(initialEmail)
-    const [focused, setFocused] = useState<Focused>(initialFocused)
     const [isSent, setIsSent] = useState<boolean>(false)
     const [sentSuccess, setSentSuccess] = useState<boolean>(true)
 
@@ -55,7 +48,6 @@ const Contact: FC = () => {
                 console.log('FAILED...', error);
             });
         setToSend(initialEmail)
-        setFocused(initialFocused)
         setIsSent(true)
         setTimeout(() => setIsSent(false), 2000)
     }
@@ -99,12 +91,10 @@ const Contact: FC = () => {
                                 id='name'
                                 type="text"
                                 value={toSend.name}
-                                focused={focused.name.toString()}
                                 required
                                 pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$"
                                 className='form__input'
-                                onChange={(e) => setToSend({ ...toSend, name: e.target.value })}
-                                onBlur={() => setFocused({ ...focused, name: true })} />
+                                onChange={(e) => setToSend({ ...toSend, name: e.target.value })} />
                             <span>Invalid name</span>
                         </div>
                         <div className="form__input">
@@ -113,12 +103,10 @@ const Contact: FC = () => {
                                 id='email'
                                 type="email"
                                 value={toSend.email}
-                                focused={focused.email.toString()}
                                 required
                                 pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}\.[0-9]{1, 3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
                                 className='form__input'
-                                onChange={(e) => setToSend({ ...toSend, email: e.target.value })}
-                                onBlur={() => setFocused({ ...focused, email: true })} />
+                                onChange={(e) => setToSend({ ...toSend, email: e.target.value })} />
                             <span>Invalid email address</span>
                         </div>
                         <div className="form__input">
@@ -127,11 +115,9 @@ const Contact: FC = () => {
                                 id='message'
                                 name='message'
                                 value={toSend.message}
-                                focused={focused.message.toString()}
                                 required
                                 className='form__input'
-                                onChange={(e) => setToSend({ ...toSend, message: e.target.value })}
-                                onBlur={() => setFocused({ ...focused, message: true })} />
+                                onChange={(e) => setToSend({ ...toSend, message: e.target.value })} />
                             <span>Your message is empty</span>
                         </div>
                         <motion.button
