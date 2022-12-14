@@ -60,7 +60,7 @@ const About: FC = () => {
                 >
                     <h3 className='subtitle'>Who am I</h3>
                     <p className='about__paragraph'>My name is <strong>Krzysztof</strong>. More than six months ago I made the decision to try my hand at programming. After learning the basic front-end technologies, I started creating my first projects.</p>
-                    <p className='about__paragraph'>At first I was copying already existing page layouts using mainly HTML and CSS. Creating and fine-tuning each project gave me a lot of satisfaction, but also gave me a lot of joy, so I decided to fully <strong>rebrand myself as a programmer</strong> and continue developing in this direction.</p>
+                    <p className='about__paragraph'>At first I was copying already existing page layouts using mainly HTML and CSS. Creating and fine-tuning each project gave me a lot of satisfaction, but also a lot of joy, so I decided to fully dedicate myself to programming and reinvent myself as a programmer.</p>
                     <p className='about__paragraph'>As a <strong>self-taught</strong> developer, I am currently expanding my skills in React using TypeScript. In the near future, I plan to deepen my knowledge with back-end technologies. In parallel, <strong>I am looking for my first job</strong> so that I can fully dedicate myself to programming and gain experience working in a team.</p>
                 </motion.div>
                 <motion.div

@@ -11,7 +11,7 @@ interface Socials {
 export const projects = [
     {
         name: 'Planets Facts',
-        description: 'Planets Facts is good source of knowledge about Solar System. You can find information about every planet orbiting the sun. Choose your planet and read about its structure, surface and more.',
+        description: 'Planets Facts is a site where you can find information about the solar system. Click on one of the planets in orbit and you will be moved to the section dedicated to the selected planet.',
         technologies: ['TypeScript', 'React', 'Framer Motion'],
         demo: 'https://mobbyschiller.github.io/planets-facts/',
         github: 'https://github.com/MobbySchiller/planets-facts',
@@ -19,7 +19,7 @@ export const projects = [
     },
     {
         name: 'Epidemic Simulator',
-        description: 'Epidemic Simulator is a tool to check the course of the epidemic in selected conditions.',
+        description: 'Epidemic Simulator is an application with which you can simulate the course of an epidemic. The simulation is based on the data you enter. The results are presented on graphs.',
         technologies: ['TypeScript', 'React', 'Material UI'],
         demo: 'https://mobbyschiller.github.io/epidemic-simulator/',
         github: 'https://github.com/MobbySchiller/epidemic-simulator',
@@ -27,15 +27,15 @@ export const projects = [
     },
     {
         name: 'In Case It Rains',
-        description: '',
+        description: 'It Case It Rains is an app which, allows you to check the weather for current of any selected location. Due to the lack of a backend, read the README posted on github to know how to use it.',
         technologies: ['Vanilla JS', 'Sass', 'REST API'],
-        demo: 'https://mobbyschiller.github.io/epidemic-simulator/',
-        github: 'https://github.com/MobbySchiller/epidemic-simulator',
+        demo: 'https://www.in-case-it-rains.online/',
+        github: 'https://github.com/MobbySchiller/in-case-it-rains',
         img: 'assets/projects/in-case-it-rains.webp'
     },
     {
         name: 'Memory',
-        description: 'Simple mind game to check memory.',
+        description: 'Memory is a simple logic game which test your intelectual skills. Select difficulty level, flip the cards and try to find their pairs in the shortest possible time',
         technologies: ['Vanilla JS', 'Sass', 'Webpack'],
         demo: 'https://www.mobbyschiller.com/',
         github: 'https://github.com/MobbySchiller/memory',
@@ -43,7 +43,7 @@ export const projects = [
     },
     {
         name: "Don't Touch the Rock",
-        description: 'Use arrows and space to avoid obstacles. Remember, you only live once.',
+        description: "Don't Touch The Rock is a simple game that involves avoiding obstacles. Use the arrow keys and spacebar to avoid being touched by the rocks in your path.",
         technologies: ['Vanilla JS', 'Sass'],
         demo: 'https://mobbyschiller.github.io/',
         github: 'https://github.com/MobbySchiller/mobbyschiller.github.io',
@@ -51,9 +51,9 @@ export const projects = [
     },
     {
         name: "Password Generator",
-        description: 'This application helps you easly generate password. You only need to choose its length from 4 to 16 characters and include what you want - lowercase letters, uppercase letters, numbers and/or symbols.',
+        description: 'Password Generator is an app, which helps you to easily generate passwords. Choose its length from 4 to 16 characters, including lowercase, uppercase, numbers and/or symbols.',
         technologies: ['Vanilla JS', 'Sass', 'Webpack'],
-        demo: '/',
+        demo: 'https://mobbyschiller.github.io/password-generator/',
         github: 'https://github.com/MobbySchiller/password-generator',
         img: 'assets/projects/password-generator.webp'
     },
