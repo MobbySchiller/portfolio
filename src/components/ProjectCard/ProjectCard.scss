@@ -20,6 +20,12 @@
 
 .card__img {
     opacity: 0.45;
+    transition: .2s;
+
+    &:hover {
+        opacity: 0.75;
+        scale: 1.2;
+    }
 }
 
 .card__info {

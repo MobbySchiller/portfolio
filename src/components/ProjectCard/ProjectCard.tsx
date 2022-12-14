@@ -42,11 +42,16 @@ const ProjectCard: FC<{ data: Data }> = ({ data }) => {
                 className='card__wrapper'
                 variants={cardVariants}>
                 <div className='card__img-container'>
-                    <img
-                        src={img}
-                        alt={`${name}-img`}
-                        className='card__img'
-                    />
+                    <a
+                        href={demo}
+                        aria-label='Check project demo'
+                        target='_blank'>
+                        <img
+                            src={img}
+                            alt={`${name}-img`}
+                            className='card__img'
+                        />
+                    </a>
                 </div>
                 <div className='card__info'>
                     <div className='project-info'>
