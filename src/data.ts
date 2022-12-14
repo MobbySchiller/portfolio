@@ -15,7 +15,7 @@ export const projects = [
         technologies: ['TypeScript', 'React', 'Framer Motion'],
         demo: 'https://mobbyschiller.github.io/planets-facts/',
         github: 'https://github.com/MobbySchiller/planets-facts',
-        img: '/assets/projects/planets-facts.webp'
+        img: 'assets/projects/planets-facts.webp'
     },
     {
         name: 'Epidemic Simulator',

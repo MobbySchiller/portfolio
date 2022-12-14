@@ -29,6 +29,7 @@ const Nav: FC = () => {
                 offset={-80}
                 duration={400}
                 activeClass='nav__link--active'
+                href='/'
                 className=' nav__link'
                 onClick={() => setIsNavActive(!isNavActive)}
             >{section}

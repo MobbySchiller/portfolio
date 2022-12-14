@@ -1,8 +1,5 @@
 import { FC } from 'react'
 import { motion, Variants } from 'framer-motion'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faLink } from '@fortawesome/free-solid-svg-icons'
 import './ProjectCard.scss'
 
 interface Data {
@@ -50,6 +47,9 @@ const ProjectCard: FC<{ data: Data }> = ({ data }) => {
                             src={img}
                             alt={`${name}-img`}
                             className='card__img'
+                            width='300px'
+                            height='200px'
+                            loading='lazy'
                         />
                     </a>
                 </div>
