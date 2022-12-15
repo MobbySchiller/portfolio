@@ -27,6 +27,7 @@ const Nav: FC = () => {
                 to={section}
                 spy={true}
                 offset={-80}
+                smooth={true}
                 duration={400}
                 activeClass='nav__link--active'
                 href='/'
