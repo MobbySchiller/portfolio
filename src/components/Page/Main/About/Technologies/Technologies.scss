@@ -3,10 +3,4 @@
 
 .technologies {
     grid-area: technologies;
-
-    & .subtitle {
-        @include mq(lg) {
-            margin-left: 2%;
-        }
-    }
 }
