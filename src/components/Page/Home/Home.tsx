@@ -17,7 +17,7 @@ const Home: FC = () => {
                     transition: { delay: .4 }
                 }}
             >
-                <span className='intro__hello'>Hello, my name is</span>
+                <span className='intro__hello'>Hello, I am</span>
                 <h1 className='intro__name'>Krzysztof Burzyński.</h1>
                 <span className='intro__occupation'>Beginner front-end developer.</span>
                 <p className='intro__description'>Welcome on my website. This is the place where you will find information about me.</p>
